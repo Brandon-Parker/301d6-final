@@ -10,23 +10,25 @@ function Project (opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('project.template').clone();
+  var $newProject = $('.template').clone();
+  $newProject.removeClass('template');
+  if (!this.publishedOn) {
+    $newProject.addClass('draft');
+  }
 
-  $newProject.attr('data-category', this.category);
-  $newProject.find('h1').attr('data-title', this.title);
+  $newProject.find('h1:first').text(this.title);
   $newProject.find('h1').html(this.title);
-  $newProject.find('a').attr('data-author', this.author);
-  $newProject.find('a').html(this.author);
+  $newProject.find('.byline a').attr('data-author', this.author);
+  $newProject.find('.byline a').html(this.author);
   $newProject.attr('data-authorUrl', this.authorUrl);
   $newProject.find('.project-body').html(this.body);
-  
+
   $newProject.find('time[pubdate]').attr('title', this.publishedOn);
 
   $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
 
   $newProject.append('<hr>');
 
-  $newProject.removeClass('template');
   return $newProject;
 };
 
