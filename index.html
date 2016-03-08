@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="vendor/styles/reset.css">
+    <!-- <link rel="stylesheet" href="vendor/styles/reset.css"> -->
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <title>Final Portfolio</title>
   </head>
@@ -19,14 +19,16 @@
       </nav>
     </header>
 
-    <section id="projects-template">
-      <article id="content">
+    <section id="projects">
+      <article class="template" data-category="cat">
         <header>
           <h1>Title</h1>
-          <div class="byLine">
-
+          <div class="byline">
+            By <address><a href="">Author Name></a></address>
+            published <time pubdate datetime="2000-01-01">Publish Time</time>
           </div>
         </header>
+        <section class="project-body"></section>
       </article>
     </section>
     <footer></footer>
