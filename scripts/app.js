@@ -10,7 +10,7 @@ function Project (opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('.template').clone();
+  var $newProject = $('article.template').clone();
   $newProject.removeClass('template');
   if (!this.publishedOn) {
     $newProject.addClass('draft');

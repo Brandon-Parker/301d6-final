@@ -2,20 +2,3 @@
   background-color: darkblue;
   padding: .1em;
 }
-
-.main-nav {
-  padding: 0;
-  list-style: none;
-  clear: both;
-}
-
-.main-nav li {
-  margin-right: .4em;
-  font-size: 1.5em;
-  padding: .5em .2em;
-  border-bottom: 1px solid #ccc;
-}
-
-h1 {
-
-}
