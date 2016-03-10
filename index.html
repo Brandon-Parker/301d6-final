@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Final Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/styles/reset.css">
     <link rel="stylesheet" href="/styles/icons.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
-    <title>Final Portfolio</title>
+
+    <script id="project-template" type="text/x-handlebars-template">
+      <article>
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
+          </div>
+        </header>
+        <section class="project-body">{{{body}}}</section>
+      </article>
+    </script>
   </head>
+
   <body>
     <header class="main-header">
       <h1>Prepare to be bombarded by Awesomeness!</h1>
@@ -24,18 +38,7 @@
       </nav>
     </header>
     <main>
-    <section id="projects" class="tab-content">
-      <article class="template" data-category="cat">
-        <header>
-          <h1>Title</h1>
-          <div class="byline">
-            By <address><a href="">Author Name</a></address>
-            published <time pubdate datetime="2000-01-01">Publish Time</time>
-          </div>
-        </header>
-        <section class="project-body"></section>
-      </article>
-    </section>
+    <section class="tab-content" id="projects"></section>
     <section id="about" class="tab-content">
       <header>
       </header>
@@ -51,6 +54,7 @@
     </main>
     <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="scripts/projectData.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/projectView.js"></script>

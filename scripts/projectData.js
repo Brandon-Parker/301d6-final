@@ -4,7 +4,7 @@ var projectDetails = [
     author: 'Brandon Parker',
     authorUrl: 'https://brandon-parker.github.io/cookie-stand',
     publishedOn: '11-8-2015',
-    body: 'One of the first projects built with HTML, CSS and JavaScript through the CodeFellows 201 program built in the second week of class.',
+    body: '<p>One of the first projects built with HTML, CSS and JavaScript through the CodeFellows 201 program built in the second week of class.</p>',
     imgLink:'images/salmon-cookie.png',
   },
   {
@@ -12,7 +12,7 @@ var projectDetails = [
     author: 'Brandon Parker',
     authorUrl: 'https://brandon-parker.github.io/vote-tracker-bp',
     publishedOn: '11-10-2015',
-    body: 'Project build on the third week of CodeFellows 201 Program.',
+    body: '</p>Project build on the third week of CodeFellows 201 Program.</p>',
     imgLink: 'images/vote-tracker.png',
 
   },
@@ -31,7 +31,7 @@ var projectDetails = [
     author: 'Brandon Parker, Carson Parker, Jared Scarr, Michael Sullivan',
     authorUrl: 'https://queue-you.firebaseapp.com/',
     publishedOn: '01-29-2016',
-    body: 'Final Project for Code Fellows 301. Queue-You by Brandon Parker, Carson Parker, Jared Scarr, Michael Sullivan. Queue-You is a web app that keeps track of students who need help during a class lab period and makes it easier for teachers to plan who to help next. Students can sign up for the help list, indicate what sort of issue they’re having, give a brief description of their problem, and receive a list of suggestions for where to look while waiting.',
+    body: '<p>Final Project for Code Fellows 301. Queue-You by Brandon Parker, Carson Parker, Jared Scarr, Michael Sullivan. Queue-You is a web app that keeps track of students who need help during a class lab period and makes it easier for teachers to plan who to help next. Students can sign up for the help list, indicate what sort of issue they’re having, give a brief description of their problem, and receive a list of suggestions for where to look while waiting.</p>',
     imgLink:'images/queue-you.png',
 
   },
