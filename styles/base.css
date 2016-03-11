@@ -33,3 +33,7 @@ a:hover, a:focus {
 a:visited {
 }
 Status API Training Shop Blog About Pricing
+
+img {
+  width: 100%;
+}
