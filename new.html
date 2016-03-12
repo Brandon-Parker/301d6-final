@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" href="vendor/styles/railscasts.css"> -->
 
     <script id="project-template" type="text/x-handlebars-template">
-      <article>
+      <!-- <article>
         <header>
           <h1>{{title}}</h1>
           <div class="byline">
@@ -20,7 +20,7 @@
           </div>
         </header>
         <section class="project-body">{{{body}}}</section>
-      </article>
+      </article> -->
     </script>
     </head>
   <body>
@@ -45,26 +45,26 @@
         <!-- DONE: Set up a form to accept user input for a new blog article: -->
         <form action="#" id="new-form">
           <label>
-            <input type="text" id="article-title" placeholder="Article title" required>
+            <input type="text" id="project-title" placeholder="Article title" required>
           </label>
-          <textarea id="article-body" rows="8" cols="40" required></textarea>
+          <textarea id="project-body" rows="8" cols="40" required></textarea>
           <label>
-            <input type="text" id="article-author" placeholder="Author Name" required>
-          </label>
-          <label>
-            <input type="text" id="article-author-url" placeholder="Author's URL" required>
+            <input type="text" id="project-author" placeholder="Author Name" required>
           </label>
           <label>
-            <input type="checkbox" id="article-published"> Published
+            <input type="text" id="project-author-url" placeholder="Author's URL" required>
+          </label>
+          <label>
+            <input type="checkbox" id="project-published"> Published
           </label>
         </form>
       </section>
-      <section id="articles" class="tab-content">
+      <section id="projects" class="tab-content">
 
       </section>
-      <section id="article-export">
-        <label id="export-field" for="article-json" class="pull-right">
-          <input type="text" readonly id="article-json">
+      <section id="project-export">
+        <label id="export-field" for="project-json" class="pull-right">
+          <input type="text" readonly id="project-json">
           When finalized, copy the above JSON, and paste into blogArticles.js
         </label>
       </section>
@@ -81,7 +81,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/projectView.js"></script>
     <script>
-      articleView.initNewArticlePage();
+      projectView.initNewProjectPage();
     </script>
   </body>
 </html>

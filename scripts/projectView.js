@@ -8,6 +8,36 @@ projectView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-$(document).ready(function() {
+projectView.initNewProjectPage = function(){
+  $('.tab-content').show();
+  $('#export-field').hide();
+  $('project-json').on('focus', function(){
+    this.select();
+  });
+  $('#new-form').on('change', 'input', 'textarea', projectView.create);
+};
+
+projectView.create = function(){
+  var newProject;
+  $('#projects').empty();
+
+  newProject = new Project({
+    title: $('#project-title').val(),
+    body: $('#project-body').val(),
+    author: $('#project-author').val(),
+    authorUrl: $('#project-author-url').val(),
+    publishedOn: $('#project-published:checked').length ? new Data() :null
+  });
+  $('#projects').append(newProject.toHtml());
+  $('#projects').each(function(i, block){
+    hljs.highlightBlock(block);
+  });
+
+  $('#export-field').show();
+  $('#project-json').val(JSON.stringify(newProject));
+};
+
+projectView.initIndexPage = function() {
   projectView.handleMainNav();
-});
+  $('#project-template').hide();
+};
