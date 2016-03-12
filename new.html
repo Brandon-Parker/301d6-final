@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog</title>
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
@@ -34,18 +35,17 @@
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
-          <li class="tab" data-content="write"><a href="#" class="icon-home"> Write</a></li>
+          <li class="tab icon-home" data-content="home"><a href="#">Home</a></li>
           <li class="tab" data-content="articles"><a href="#" class="icon-home"> Preview</a></li>
         </ul>
       </nav>
     </header>
     <main class="clearfix">
       <section id="write" class="tab-content">
-        <h1>New Article</h1>
-        <!-- DONE: Set up a form to accept user input for a new blog article: -->
+        <h1>New Project</h1>
         <form action="#" id="new-form">
           <label>
-            <input type="text" id="project-title" placeholder="Article title" required>
+            <input type="text" id="project-title" placeholder="Project title" required>
           </label>
           <textarea id="project-body" rows="8" cols="40" required></textarea>
           <label>
@@ -70,7 +70,7 @@
       </section>
     </main>
     <footer>
-      &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+      &copy; 2016 BRANDON | Static Blog | Happy Ipsum!
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

@@ -6,9 +6,13 @@
   float: right;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .site-header {
-  background-color: darkblue;
-  padding: .1em;
+  background-color: #FFEAAA;
 }
 
 main {
@@ -17,7 +21,7 @@ main {
 
 .main-header {
   width: 100%;
-  background: #FFF;
+  background: #DDD;
 }
 
 .main-header h1 {

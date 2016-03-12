@@ -26,7 +26,7 @@ projectView.create = function(){
     body: $('#project-body').val(),
     author: $('#project-author').val(),
     authorUrl: $('#project-author-url').val(),
-    publishedOn: $('#project-published:checked').length ? new Data() :null
+    publishedOn: $('#project-published:checked').length ? new Date() :null
   });
   $('#projects').append(newProject.toHtml());
   $('#projects').each(function(i, block){

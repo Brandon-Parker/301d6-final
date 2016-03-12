@@ -37,6 +37,12 @@
   width: 100%;
 }
 
+#project-export label {
+  font-size: .8em;
+  font-style: italic;
+  color: #ccc;
+}
+
 @media only screen and (min-width: 350px) {
   .icon-menu{
     position: absolute;
@@ -59,10 +65,3 @@
   }
 
 }
-
-
-
-/*.background {
-  width: 100%;
-  z-index: -1;
-}*/
