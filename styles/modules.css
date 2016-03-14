@@ -16,6 +16,7 @@
 }
 
 .main-nav ul {
+  display: none;
   padding: 0;
   list-style: none;
   clear: both;
@@ -45,7 +46,7 @@
     right: 0;
   }
 
-  .main-nav:hover ul {
+  .nav-container:hover ul {
     display: block;
   }
 }
@@ -56,16 +57,21 @@
   }
 
   .main-nav ul {
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    /*text-align: left;*/
+    width: 100%;
+  }
+
+  .main-nav ul li {
+    width: 20%;
   }
 
 }
 
 @media only screen and (min-width: 768px) {
-  .icon-menu:hover {
+  /*.icon-menu:hover {
     display: block
-  }
+  }*/
   .main-nav ul {
     display: flex;
     width: 100%;
