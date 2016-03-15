@@ -11,7 +11,7 @@ projectView.handleMainNav = function() {
 projectView.initNewProjectPage = function(){
   $('.tab-content').show();
   $('#export-field').hide();
-  $('project-json').on('focus', function(){
+  $('#project-json').on('focus', function(){
     this.select();
   });
   $('#new-form').on('change', 'input', 'textarea', projectView.create);
@@ -38,6 +38,10 @@ projectView.create = function(){
 };
 
 projectView.initIndexPage = function() {
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml());
+  });
+
   projectView.handleMainNav();
   $('#project-template').hide();
 };
