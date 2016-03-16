@@ -1,47 +1,52 @@
-var projectView = {};
+(function(module) {
 
-projectView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function(e) {
-    $('.tab-content').hide();
-    $('#' + $(this).data('content')).fadeIn();
-  });
-  $('.main-nav .tab:first').click();
-};
+  var projectView = {};
 
-projectView.initNewProjectPage = function(){
-  $('.tab-content').show();
-  $('#export-field').hide();
-  $('#project-json').on('focus', function(){
-    this.select();
-  });
-  $('#new-form').on('change', 'input', 'textarea', projectView.create);
-};
+  projectView.handleMainNav = function() {
+    $('.main-nav').on('click', '.tab', function(e) {
+      $('.tab-content').hide();
+      $('#' + $(this).data('content')).fadeIn();
+    });
+    $('.main-nav .tab:first').click();
+  };
 
-projectView.create = function(){
-  var newProject;
-  $('#projects').empty();
+  projectView.initNewProjectPage = function() {
+    $('.tab-content').show();
+    $('#export-field').hide();
+    $('#project-json').on('focus', function() {
+      this.select();
+    });
+    $('#new-form').on('change', 'input', 'textarea', projectView.create);
+  };
 
-  newProject = new Project({
-    title: $('#project-title').val(),
-    body: $('#project-body').val(),
-    author: $('#project-author').val(),
-    authorUrl: $('#project-author-url').val(),
-    publishedOn: $('#project-published:checked').length ? new Date() :null
-  });
-  $('#projects').append(newProject.toHtml());
-  $('#projects').each(function(i, block){
-    hljs.highlightBlock(block);
-  });
+  projectView.create = function() {
+    var newProject;
+    $('#projects').empty();
 
-  $('#export-field').show();
-  $('#project-json').val(JSON.stringify(newProject));
-};
+    newProject = new Project({
+      title: $('#project-title').val(),
+      body: $('#project-body').val(),
+      author: $('#project-author').val(),
+      authorUrl: $('#project-author-url').val(),
+      publishedOn: $('#project-published:checked').length ? new Date() : null
+    });
+    $('#projects').append(newProject.toHtml());
+    $('#projects').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
 
-projectView.initIndexPage = function() {
-  Project.all.forEach(function(a) {
-    $('#projects').append(a.toHtml());
-  });
+    $('#export-field').show();
+    $('#project-json').val(JSON.stringify(newProject));
+  };
 
-  projectView.handleMainNav();
-  $('#project-template').hide();
-};
+  projectView.initIndexPage = function() {
+    Project.all.forEach(function(a) {
+      $('#projects').append(a.toHtml());
+    });
+
+    projectView.handleMainNav();
+    $('#project-template').hide();
+  };
+
+  module.projectView = projectView;
+})(window);
