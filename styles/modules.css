@@ -1,0 +1,82 @@
+.template {
+  display: none;
+}
+
+.icon-menu {
+  position: absolute;
+  right: 0;
+  font-size: 3.5em;
+  top: 0;
+}
+
+.main-nav {
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+  border-bottom: 1px solid #ccc;
+}
+
+.background img {
+  width: 100%;
+}
+
+#project-export label {
+  font-size: .8em;
+  font-style: italic;
+  color: #ccc;
+}
+
+@media only screen and (min-width: 350px) and (max-width: 639px){
+  .icon-menu{
+    position: absolute;
+    right: 0;
+  }
+
+  .nav-container:hover ul {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav ul {
+    display: flex;
+    /*text-align: left;*/
+    width: 100%;
+  }
+
+  .main-nav ul li {
+    width: 20%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  /*.icon-menu:hover {
+    display: block
+  }*/
+  .main-nav ul {
+    display: flex;
+    width: 100%;
+  }
+  /*.main-nav:hover ul {
+    display: none;
+  }*/
+}
