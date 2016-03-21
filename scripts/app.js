@@ -1,12 +1,8 @@
 (function(module) {
-
   function Project(opts) {
-    this.title = opts.title;
-    this.author = opts.author;
-    this.authorUrl = opts.authorUrl;
-    this.publishedOn = opts.publishedOn;
-    this.body = opts.body;
-    this.imgLink = opts.imgLink;
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    }, this);
   }
 
   Project.all = [];
