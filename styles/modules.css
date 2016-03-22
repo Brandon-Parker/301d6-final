@@ -30,9 +30,6 @@
   border-bottom: 1px solid #ccc;
 }
 
-.background img {
-  width: 100%;
-}
 
 #project-export label {
   font-size: .8em;
@@ -58,7 +55,7 @@
 
   .main-nav ul {
     display: flex;
-    /*text-align: left;*/
+    text-align: center;
     width: 100%;
   }
 
@@ -69,14 +66,10 @@
 }
 
 @media only screen and (min-width: 768px) {
-  /*.icon-menu:hover {
-    display: block
-  }*/
+
   .main-nav ul {
     display: flex;
     width: 100%;
   }
-  /*.main-nav:hover ul {
-    display: none;
-  }*/
+  
 }
