@@ -31,22 +31,22 @@
         <div class="nav-container">
         <div class="icon-menu"></div>
         <ul>
-          <li class="tab icon-home" data-content="home"><a href="#">Home</a></li>
-          <li class="tab icon-power" data-content="projects"><a href="#">Work</a></li>
-          <li class="tab icon-address-book" data-content="about"><a href="#">About</li>
-          <li class="tab icon-github"><a href="https://github.com/Brandon-Parker">Github</a></li>
-          <li class="tab icon-twitter3"><a href="https://twitter.com/Brandadondondon">Twitter</a></li>
+          <li class="tab icon-home" data-content="home"><a href="/">Home</a></li>
+          <li class="tab icon-power" data-content="projects"><a href="/work">Work</a></li>
+          <li class="tab icon-address-book" data-content="about"><a href="/about">About</li>
+          <li class="tab icon-github"><a href="https://github.com/Brandon-Parker" target="_blank">Github</a></li>
+          <li class="tab icon-twitter3"><a href="https://twitter.com/Brandadondondon" target="_blank">Twitter</a></li>
         </ul>
       </div>
       </nav>
     </header>
-    <section class="tab-content" id="home">
+    <section id="home" class="tab-content">
       <div class="background">
         <img src="images/background.png" alt="background" />
       </div>
     </section>
     <main>
-    <section class="tab-content" id="projects"></section>
+    <section id="projects" class="tab-content"></section>
     <section id="about" class="tab-content">
       <header>
       </header>
@@ -63,13 +63,14 @@
     <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-    <script src="vendor/scripts/marked.js"></script>
+    <script src="/vendor/scripts/marked.js"></script>
     <script src="/vendor/scripts/highlight.pack.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/projectView.js"></script>
-    <script>
-    // projectView.initIndexPage();
-    Project.fetchAll(projectView.initIndexPage);
-    </script>
+    <script src="/vendor/scripts/page.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/projectView.js"></script>
+    <script src="/scripts/homeController.js"></script>
+    <script src="/scripts/appController.js"></script>
+    <script src="/scripts/aboutController.js"></script>
+    <script src="/scripts/routes.js"></script>
   </body>
 </html>
