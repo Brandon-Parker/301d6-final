@@ -5,7 +5,9 @@
     $('#about').show();
     $('#projects').hide();
     $('#home').hide();
+    repos.requestRepos(repoView.index);
   };
+
 
 
   module.aboutController = aboutController;
