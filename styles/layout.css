@@ -1,0 +1,127 @@
+/*MAIN SECTION STYLES
+=======================================*/
+
+main {
+  background-color: #C5C3C6;
+}
+
+.main-header {
+  width: 100%;
+}
+
+.main-header h1 {
+  text-align: left;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 36px;
+  padding-left: 2%;
+}
+
+
+.main-header h2 {
+  text-align: left;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  padding-left: 2%;
+}
+
+
+.background img {
+  width: 100%;
+}
+
+/*WORK SECTION STYLES
+=======================================*/
+
+.project-img {
+  max-width: 100%;
+}
+
+.project-img img{
+  width: 100%;
+}
+
+#projects {
+  padding: 3%;
+}
+
+.button {
+    font-size: 20%;
+    letter-spacing: .2em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: grey;
+    border-radius: 2px;
+}
+
+a.button{
+  position: relative;;
+  color: white;
+}
+
+/*ABOUT SECTION STYLES
+=======================================*/
+
+#about {
+  padding-left: 3%;
+}
+
+#about-me h1 {
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+}
+
+.intro {
+  max-width: 100%;
+  text-align: center;
+}
+
+.intro img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+/*FORM STYLES
+=======================================*/
+.form{
+  padding: 2%;
+}
+
+label {
+  font-size: 3em;
+}
+
+input {
+  width: 100%;
+  margin: .5em 0;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+}
+
+input[type="checkbox"] {
+  width: .28em;
+  height: .28em;
+  font-size: 3em;
+}
+
+textarea {
+  width: 100%;
+  margin: .5em 0;
+  font-size: 2em;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+
+input:invalid, textarea:invalid {
+  border-color: #AE3F3C;
+}
+
+input:valid, textarea:valid {
+  border-color: #89CB8E;
+}
