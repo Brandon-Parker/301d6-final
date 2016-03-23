@@ -3,8 +3,8 @@
 
 <head>
   <title>Final Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <meta name="viewport" content="width=device-width", initial-scale="1">
+  <link rel="stylesheet" href="/vendor/styles/normalize.css">
   <link rel="stylesheet" href="/styles/icons.css">
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/layout.css">
@@ -14,7 +14,7 @@
     <article>
       <header>
         <h1>{{title}}</h1>
-        <div class="project-img"><img src="{{imgLink}}"></div>
+        <div class="project-img"><a href="{{authorUrl}}" target="_blank"><img src="{{imgLink}}"></a></div>
         <div class="byline">
           By <address><a href="{{authorUrl}}">{{author}}</a></address> published
           <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
@@ -61,6 +61,10 @@
       <header>
       </header>
       <section id="about-me">
+        <div class="intro">
+          <h1>Hi, my name is Brandon Parker</h1>
+          <img src="/images/profile.png" alt="Profile Photo" />
+        </div>
         <h1>Some of my Interests</h1>
         <ul>
           <li>Coding</li>

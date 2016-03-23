@@ -3,8 +3,6 @@
 
   var ui = function() {
     var $about = $('#about');
-
-    // $about.show().siblings().hide();
   };
 
   var render = Handlebars.compile($('#repo-template').text());

@@ -8,7 +8,5 @@
     repos.requestRepos(repoView.index);
   };
 
-
-
   module.aboutController = aboutController;
 })(window);

@@ -16,6 +16,7 @@
 }
 
 main {
+  background-color: #C5C3C6;
 }
 
 .main-header {
@@ -62,4 +63,14 @@ main {
 
 #about {
   padding-left: 3%;
+}
+
+.intro {
+  max-width: 100%;
+  text-align: center;
+}
+
+.intro img {
+  width: 50%;
+  border-radius: 50%;
 }

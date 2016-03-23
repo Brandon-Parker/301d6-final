@@ -2,27 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog</title>
-    <link rel="stylesheet" href="vendor/styles/normalize.css">
-    <link rel="stylesheet" href="styles/icons.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <link rel="stylesheet" href="/vendor/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/icons.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/modules.css">
   </head>
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1 pull-left">
-        <h1>
-          Awesomeness
-        </h1>
+        <h1>Awesomeness</h1>
         <h2>The shocking power of static pages</h2>
       </section>
       <nav class="main-nav">
-        <div class="icon-menu"></div>
-        <ul>
-          <li class="tab icon-home" data-content="home"><a href="/">Home</a></li>
-        </ul>
+        <div class="nav-container">
+          <div class="icon-menu"></div>
+          <ul>
+            <li class="tab icon-home" data-content="home"><a href="/">Home</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="clearfix">
@@ -44,9 +44,7 @@
           </label>
         </form>
       </section>
-      <section id="projects" class="tab-content">
-
-      </section>
+      <section id="projects" class="tab-content"></section>
       <section id="project-export">
         <label id="export-field" for="project-json" class="pull-right">
           <input type="text" readonly id="project-json">
