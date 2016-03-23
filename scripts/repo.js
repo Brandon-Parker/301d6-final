@@ -4,7 +4,7 @@
   repos.all = [];
 
   repos.requestRepos = function(callback) {
-    $.get('github.com/users/Brandon-Parker/repos?per_page=3&sort=updated')
+    $.get('github/users/Brandon-Parker/repos?per_page=3&sort=updated')
       .done(function(data, message, xhr){
         repos.all = data;
       })
