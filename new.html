@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/vendor/styles/animate.css">
   </head>
   <body>
-    <header class="site-header clearfix">
-      <section class="heading-group-h1 pull-left">
-        <h1>Awesomeness</h1>
-        <h2>The shocking power of static pages</h2>
-      </section>
+    <header class="main-header">
+      <h1>Awesomeness</h1>
+      <h2>The shocking power of static pages</h2>
       <nav class="main-nav">
         <div class="nav-container">
           <div class="icon-menu"></div>
@@ -25,14 +24,14 @@
         </div>
       </nav>
     </header>
-    <main class="clearfix">
+    <main class="form">
       <section id="write" class="tab-content">
         <h1>New Project</h1>
         <form action="#" id="new-form">
           <label>
-            <input type="text" id="project-title" placeholder="Project title" required>
+            <input type="text" id="project-title" placeholder="Project Title" required>
           </label>
-          <textarea id="project-body" rows="8" cols="40" required></textarea>
+          <textarea id="project-body" placeholder="Project Description" rows="4" cols="20" required></textarea>
           <label>
             <input type="text" id="project-author" placeholder="Author Name" required>
           </label>
@@ -44,7 +43,6 @@
           </label>
         </form>
       </section>
-      <section id="projects" class="tab-content"></section>
       <section id="project-export">
         <label id="export-field" for="project-json" class="pull-right">
           <input type="text" readonly id="project-json">
@@ -53,7 +51,7 @@
       </section>
     </main>
     <footer>
-      &copy; 2016 BRANDON | Static Blog | Happy Ipsum!
+      &copy; 2016 BRANDON | Portfolio 2016 | Product of CodeFellows!
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

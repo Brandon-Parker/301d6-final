@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/styles/base.css">
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/modules.css">
+  <link rel="stylesheet" href="/vendor/styles/animate.css">
 
   <script id="project-template" type="text/x-handlebars-template">
     <article>
@@ -21,12 +22,14 @@
         </div>
       </header>
       <section class="project-body">{{{body}}}</section>
+      <a href="{{authorUrl}}" class="button">View '{{title}}''<a/>
     </article>
   </script>
   <script id="repo-template" type="text/x-handlebars-template">
     <li>
       <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
       <p>Created: {{created_at}}</p>
+      <p>Language: {{language}}</p>
       <p>Last Update: {{updated_at}}</p>
       <p>Github Link: {{url}}</p>
     </li>
@@ -42,7 +45,7 @@
         <div class="icon-menu"></div>
         <ul>
           <li class="tab icon-home" data-content="home"><a href="/">Home</a></li>
-          <li class="tab icon-power" data-content="projects"><a href="/work">Work</a></li>
+          <li class="tab icon-rocket" data-content="projects"><a href="/work">Work</a></li>
           <li class="tab icon-address-book" data-content="about"><a href="/about">About</li>
           <li class="tab icon-github"><a href="https://github.com/Brandon-Parker" target="_blank">Github</a></li>
           <li class="tab icon-twitter3"><a href="https://twitter.com/Brandadondondon" target="_blank">Twitter</a></li>
@@ -51,19 +54,19 @@
     </nav>
   </header>
   <section id="home" class="tab-content">
-    <div class="background">
+    <div class="background animated fadeIn">
       <img src="images/background.png" alt="background" />
     </div>
   </section>
   <main>
-    <section id="projects" class="tab-content project-img"></section>
-    <section id="about" class="tab-content">
+    <section id="projects" class="tab-content project-img animated fadeIn"></section>
+    <section id="about" class="tab-content animated fadeIn">
       <header>
       </header>
       <section id="about-me">
         <div class="intro">
           <h1>Hi, my name is Brandon Parker</h1>
-          <img src="/images/profile.png" alt="Profile Photo" />
+          <img src="/images/profile.png" alt="Profile Photo"/>
         </div>
         <h1>Some of my Interests</h1>
         <ul>
@@ -78,7 +81,10 @@
       </section>
     </section>
   </main>
-  <footer></footer>
+  <footer>
+    &copy; 2016 BRANDON | Portfolio 2016 | Product of CodeFellows!
+  </footer>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
   <script src="/vendor/scripts/marked.js"></script>
