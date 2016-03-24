@@ -19,13 +19,11 @@
   };
 
   Project.loadAll = function(projectData) {
-    projectData.sort(function(a, b) {
-      return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-    });
-
-    projectData.forEach(function(ele) {
-      Project.all.push(new Project(ele));
-    });
+    if (Project.all.length === 0) {
+      projectData.forEach(function(ele) {
+        Project.all.push(new Project(ele));
+      });
+    }
   };
 
   Project.fetchAll = function(next) {
@@ -37,7 +35,6 @@
         localEtag = xhr.getResponseHeader('eTag');
         localStorage.setItem('eTag', localEtag);
         if (localStorage.eTag === xhr.getResponseHeader('eTag') && localStorage.projectData) {
-          // console.log(localStorage.eTag);
           Project.loadAll(JSON.parse(localStorage.projectData));
           next();
         } else {
